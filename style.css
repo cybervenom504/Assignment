@@ -218,6 +218,71 @@ section:nth-child(even) {
     margin-right: 10px;
 }
 
+
+
+/* Skills - Flexbox */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+}
+
+.skill-item {
+    flex: 1 1 180px;
+    padding: 18px 22px;
+    background-color: white;
+    border: 1px solid #e7ebf2;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 8px 22px rgba(16, 24, 40, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(16, 24, 40, 0.12);
+}
+
+/* Projects - CSS Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e7ebf2;
+    box-shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(16, 24, 40, 0.12);
+}
+
+.project-card h3 {
+    color: #1769d1;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #536174;
+}
+
+/* Responsive image */
+.hero-image {
+    width: min(230px, 100%);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    max-width: 100%;
+}
+
 /* Career */
 .career-box {
     max-width: 850px;
@@ -359,8 +424,13 @@ footer strong {
     }
 
     .cards,
+    .project-grid,
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .skills-list {
+        gap: 14px;
     }
 }
 
